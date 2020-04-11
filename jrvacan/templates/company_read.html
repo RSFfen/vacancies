@@ -1,0 +1,27 @@
+{% extends 'web/base.html' %}
+{% load static %}
+
+{% block content %}
+
+    <div class="card mb-4">
+        <div class="card-body px-4">
+            <div class="row">
+                <h1 class="text-center mt-4" data-test="title">{{ company.name }}</h1>
+            </div>
+            <div class="row">
+                <p class="text-center pt-1">
+                <img src="{% static company.logo %}" width="130" height="80" alt="">
+                </p>
+            </div>
+            <div class="row">
+                <p><b>География: </b> {{ company.location }}</p>
+            </div>
+            <div class="row">
+                <p><b>Количество работающих: </b> {{ company.employee_count }} чел.</p>
+            </div>
+            <div class="row">
+                <p><b>Информация о фирме: </b> {{ company.description }}</p>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
